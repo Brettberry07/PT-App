@@ -1,6 +1,0 @@
-/Users/berrybr/Desktop/Coding/MobileDev/PT-App/platforms/android/app/src/main/assets/app/runtime.js
-/Users/berrybr/Desktop/Coding/MobileDev/PT-App/platforms/android/app/src/main/assets/app/bundle.js
-/Users/berrybr/Desktop/Coding/MobileDev/PT-App/platforms/android/app/src/main/assets/app/runtime.79caf3018a677677be5f.hot-update.js
-/Users/berrybr/Desktop/Coding/MobileDev/PT-App/platforms/android/app/src/main/assets/app/vendor.js
-/Users/berrybr/Desktop/Coding/MobileDev/PT-App/platforms/android/app/src/main/assets/app/bundle.79caf3018a677677be5f.hot-update.js
-/Users/berrybr/Desktop/Coding/MobileDev/PT-App/platforms/android/app/src/main/assets/app/tns_modules/inspector_modules.js
