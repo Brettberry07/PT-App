@@ -1,0 +1,15 @@
+{
+	"@nativescript/core": {
+		"/Users/berrybr/Desktop/Coding/MobileDev/PT-App/node_modules/@nativescript/core/platforms/android/core.aar": "398718dd5be0b8e616fe2c5a979c9824681c57fe",
+		"/Users/berrybr/Desktop/Coding/MobileDev/PT-App/node_modules/@nativescript/core/platforms/android/native-api-usage.json": "4a614afaa51061d74eba0cbe39100f47b0e2a10b",
+		"/Users/berrybr/Desktop/Coding/MobileDev/PT-App/node_modules/@nativescript/core/platforms/android/res/values/ids.xml": "af407e752ae7884c6e064d1dc81008497d5ff0cc",
+		"/Users/berrybr/Desktop/Coding/MobileDev/PT-App/node_modules/@nativescript/core/platforms/android/winter_tc-release.aar": "501d4ad25f8d8d2cf425c1fa3aa8ffad583c1ff2",
+		"/Users/berrybr/Desktop/Coding/MobileDev/PT-App/node_modules/@nativescript/core/platforms/android/widgets-release.aar": "188820e15babb6a443b6a0f0075caa2078d486f7"
+	},
+	"nativescript-ui-core": {
+		"/Users/berrybr/Desktop/Coding/MobileDev/PT-App/node_modules/nativescript-ui-core/platforms/android/TNSCore-release.aar": "b0a7669a71f361505f1a91a9ebc1b9cf64213f79"
+	},
+	"nativescript-ui-sidedrawer": {
+		"/Users/berrybr/Desktop/Coding/MobileDev/PT-App/node_modules/nativescript-ui-sidedrawer/platforms/android/TNSSideDrawer-release.aar": "601190cbc04b24f7d68a0212c45bb1b9bc97708a"
+	}
+}
