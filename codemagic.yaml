@@ -1,0 +1,57 @@
+workflows:
+  nativescript-android:
+    name: NativeScript Android Build
+    environment:
+      vars:
+        NODE_VERSION: 18
+        JAVA_VERSION: 17
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Install Node.js
+        script: |
+          nvm install $NODE_VERSION
+          nvm use $NODE_VERSION
+      - name: Install NativeScript CLI
+        script: |
+          npm install -g nativescript
+      - name: Install Dependencies
+        script: |
+          npm install
+      - name: Build Android
+        script: |
+          tns build android --release --key-store-path /path/to/keystore.jks --key-store-password $KEYSTORE_PASSWORD --key-store-alias $KEYSTORE_ALIAS --key-store-alias-password $KEYSTORE_ALIAS_PASSWORD
+    artifacts:
+      - build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - "your-email@example.com"
+
+  nativescript-ios:
+    name: NativeScript iOS Build
+    environment:
+      vars:
+        NODE_VERSION: 18
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Install Node.js
+        script: |
+          nvm install $NODE_VERSION
+          nvm use $NODE_VERSION
+      - name: Install NativeScript CLI
+        script: |
+          npm install -g nativescript
+      - name: Install Dependencies
+        script: |
+          npm install
+      - name: Build iOS
+        script: |
+          tns build ios --release --provision $PROVISIONING_PROFILE
+    artifacts:
+      - platforms/ios/build/Release-iphoneos/*.ipa
+    publishing:
+      email:
+        recipients:
+          - "your-email@example.com"
