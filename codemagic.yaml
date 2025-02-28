@@ -8,10 +8,16 @@ workflows:
       flutter: stable
       xcode: latest
     scripts:
-      - name: Install Node.js
+      - name: Install NVM and Node.js
         script: |
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+          [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
           nvm install $NODE_VERSION
           nvm use $NODE_VERSION
+          node -v  # Verify Node.js version
+
       - name: Install NativeScript CLI
         script: |
           npm install -g nativescript
