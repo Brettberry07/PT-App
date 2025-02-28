@@ -24,9 +24,18 @@ workflows:
       - name: Install Dependencies
         script: |
           npm install
-      - name: Build Android
+      - name: Build Android Release
         script: |
-          tns build android --release --key-store-path /path/to/keystore.jks --key-store-password $KEYSTORE_PASSWORD --key-store-alias $KEYSTORE_ALIAS --key-store-alias-password $KEYSTORE_ALIAS_PASSWORD
+          export KEYSTORE_PASSWORD=$ANDROID_KEYSTORE_KEYSTORE_PASSWORD
+          export KEYSTORE_ALIAS=$ANDROID_KEYSTORE_KEYSTORE_ALIAS
+          export KEYSTORE_ALIAS_PASSWORD=$ANDROID_KEYSTORE_KEYSTORE_ALIAS_PASSWORD
+          export KEYSTORE_PATH=$ANDROID_KEYSTORE_KEYSTORE_PATH
+
+          tns build android --release \
+            --key-store-path $KEYSTORE_PATH \
+            --key-store-password $KEYSTORE_PASSWORD \
+            --key-store-alias $KEYSTORE_ALIAS \
+            --key-store-alias-password $KEYSTORE_ALIAS_PASSWORD
     artifacts:
       - build/outputs/**/*.apk
     publishing:
